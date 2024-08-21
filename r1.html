@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Delivery Form</title>
+    
+    <!-- CSS Styling within the HTML file -->
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Label styling */
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* Input, textarea, select, and checkbox styling */
+        input, textarea, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Checkbox and radio button container */
+        .checkbox-group, .radio-group {
+            margin-bottom: 20px;
+        }
+
+        /* Checkbox and radio button styling */
+        .checkbox-group label, .radio-group label {
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        /* Focused input fields styling */
+        input:focus, textarea:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grocery Delivery Service</h1>
+        <form id="deliveryForm">
+            <!-- Text Input for Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Text Input for Address -->
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Phone Number Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Number Input for Quantity -->
+            <label for="quantity">Number of Items:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+
+            <!-- Textarea for Grocery Items -->
+            <label for="items">Grocery Items (comma-separated):</label>
+            <textarea id="items" name="items" rows="4" required></textarea>
+
+            <!-- Date Input for Preferred Delivery Date -->
+            <label for="deliveryDate">Preferred Delivery Date:</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+            <!-- Time Slot Selection -->
+            <label for="timeSlot">Preferred Delivery Time Slot:</label>
+            <select id="timeSlot" name="timeSlot" required>
+                <option value="morning">Morning (8 AM - 12 PM)</option>
+                <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                <option value="evening">Evening (4 PM - 8 PM)</option>
+            </select>
+
+            <!-- Checkbox Group for Additional Services -->
+            <label>Additional Services:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="service" value="express"> Express Delivery</label>
+                <label><input type="checkbox" name="service" value="contactless"> Contactless Delivery</label>
+                <label><input type="checkbox" name="service" value="giftwrap"> Gift Wrap</label>
+            </div>
+
+            <!-- Radio Group for Payment Method -->
+            <label>Payment Method:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="paymentMethod" value="credit" required> Credit Card</label>
+                <label><input type="radio" name="paymentMethod" value="debit" required> Debit Card</label>
+                <label><input type="radio" name="paymentMethod" value="cash" required> Cash on Delivery</label>
+            </div>
+
+            <!-- Button to Submit Form -->
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+ 
+
